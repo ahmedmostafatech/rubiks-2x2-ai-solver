@@ -75,8 +75,8 @@ rubiks-2x2-ai-solver/
 | Member | Role | Responsibilities |
 |---|---|---|
 | Member 1: Ahmed | Lead Developer / Algorithms | State and moves, BFS, Bidirectional BFS, Pattern DBs, IDA*, final integration |
-| Member 2: _name_ | GUI Developer | Pygame interface, animations, keyboard controls, connecting the solvers to the UI |
-| Member 3: _name_ | Game Features and Testing | Greedy solver, timer/counter/undo/leaderboard, unit tests, benchmark script |
+| Member 2: Andro | GUI Developer | Pygame interface, animations, keyboard controls, connecting the solvers to the UI |
+| Member 3: Ahmed Ali | Game Features and Testing | Greedy solver, timer/counter/undo/leaderboard, unit tests, benchmark script |
 
 Each member writes the documentation section for their own part.
 
