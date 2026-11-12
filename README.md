@@ -51,12 +51,14 @@ rubiks-2x2-ai-solver/
 ├── requirements.txt
 ├── src/
 │   ├── cube.py              # State + moves + scramble           (Member 1)
+│   │                        # (every folder under src/ also has an empty __init__.py)
 │   ├── solvers/
 │   │   ├── bfs.py                                                 (Member 1)
 │   │   ├── bidirectional.py                                       (Member 1)
 │   │   ├── heuristics.py    # Pattern databases                   (Member 1)
 │   │   ├── ida_star.py                                            (Member 1)
 │   │   └── greedy.py                                              (Member 3)
+│   │   # solvers/__init__.py holds the SOLVERS dictionary (all solvers in one place)
 │   ├── game/
 │   │   └── features.py      # Timer, counter, undo/redo, leaderboard (Member 3)
 │   ├── gui/
@@ -75,8 +77,8 @@ rubiks-2x2-ai-solver/
 | Member | Role | Responsibilities |
 |---|---|---|
 | Member 1: Ahmed | Lead Developer / Algorithms | State and moves, BFS, Bidirectional BFS, Pattern DBs, IDA*, final integration |
-| Member 2: Andro | GUI Developer | Pygame interface, animations, keyboard controls, connecting the solvers to the UI |
-| Member 3: Ahmed Ali | Game Features and Testing | Greedy solver, timer/counter/undo/leaderboard, unit tests, benchmark script |
+| Member 2: _name_ | GUI Developer | Pygame interface, animations, keyboard controls, connecting the solvers to the UI |
+| Member 3: _name_ | Game Features and Testing | Greedy solver, timer/counter/undo/leaderboard, unit tests, benchmark script |
 
 Each member writes the documentation section for their own part.
 
@@ -105,19 +107,21 @@ Everyone codes against these names, so we can work in parallel.
 git clone https://github.com/<username>/rubiks-2x2-ai-solver.git
 cd rubiks-2x2-ai-solver
 pip install -r requirements.txt
-python src/gui/main.py
+python -m src.gui.main
 ```
+
+Run everything **from the project root folder** (that is why we use `python -m`).
 
 Run the tests:
 
 ```bash
-python -m unittest discover tests
+python -m unittest discover -s tests
 ```
 
 Run the benchmark:
 
 ```bash
-python src/benchmark.py
+python -m src.benchmark
 ```
 
 ---
